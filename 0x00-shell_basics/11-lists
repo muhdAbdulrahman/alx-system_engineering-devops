@@ -1,0 +1,10 @@
+#!/bin/bash
+ls -la
+parent_directory="$(dirname "$(pwd)")"
+# List files in the parent directory
+echo "Parent directory:"
+ls -la "$parent_directory"
+
+# List files in the /boot directory
+echo "/boot directory:"
+ls -la /boot

@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -v '^\.\/\(\.\|..\)$'
+ls -pmv

@@ -1,3 +1,2 @@
 #!/bin/bash
-
-chtr -d "cC"
+tr -d "cC"

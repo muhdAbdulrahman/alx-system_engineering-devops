@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash script that displays the content of the current directory in a list format
+
+for file in *
+do
+	if [ -f "$file" ]; then
+		text_cut=$(echo "$file" | cut -d '-' -f 2-)
+		echo "$text_cut"
+	fi
+
+done

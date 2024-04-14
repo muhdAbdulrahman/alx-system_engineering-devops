@@ -1,0 +1,23 @@
+##A little idea about what happen when you type google.com in your browser and press Enter.
+
+When you type "https://www.google.com" into your browser's address bar and hit Enter, a series of intricate processes begin behind the scenes to fetch the desired webpage. First, let's delve into the journey of a HTTPS request and understand each step involved:
+DNS Request:
+Your browser first initiates a Domain Name System (DNS) request to translate the human-readable domain name "www.google.com" into an IP address, which computers can understand. This request is sent to a DNS server, which searches its database for the corresponding IP address associated with the domain name.
+TCP/IP:
+Once the IP address is obtained, your browser establishes a Transmission Control Protocol (TCP) connection with the server hosting the website. TCP ensures reliable communication by breaking data into packets, numbering them, and reassembling them at the destination.
+Firewall:
+The TCP connection then passes through any firewalls configured on your network or on the server's network. Firewalls enforce security policies, filtering incoming and outgoing network traffic based on predefined rules to protect against unauthorized access and malicious activity.
+HTTPS/SSL:
+If the website supports HTTPS (Hypertext Transfer Protocol Secure), your browser initiates a secure connection using the SSL/TLS (Secure Sockets Layer/Transport Layer Security) protocol. The SSL/TLS encrypts the data transmitted between your browser and the server, ensuring confidentiality and integrity of the communication.
+Load-Balancer:
+In the case of large-scale websites like Google, incoming HTTPS requests are often directed to a load balancer that distributes the incoming traffic across multiple web servers, ensuring optimal resource utilization, scalability, and high availability.
+Web Server:
+After passing through the load balancer, the HTTPS request reaches one of the web servers hosting the Google website. The web server processes the request, retrieves the requested webpage, and prepares it for delivery to the client.
+Application Server:
+In some cases, the web server may need to interact with an application server to fulfill the request. The application server executes scripts or applications, generates dynamic content, and communicates with databases or other backend systems if necessary.
+Database:
+If the requested webpage requires data from a database (such as search results or personalized content), the application server retrieves the relevant information from the database.
+The database server processes the query, retrieves the requested data, and sends it back to the application server for inclusion in the webpage.
+Finally, the requested webpage, along with any dynamic content or data, is assembled and transmitted back through the same channels i.e, TCP/IP, HTTPS, load balancer, web server, application server, and potentially a database before it is rendered and displayed in your browser.
+In conclusion, the journey of a HTTPS request involves a complex interplay of various technologies and systems working together seamlessly to deliver the desired webpage securely and efficiently. From DNS resolution to database queries, each step plays a crucial role in ensuring a smooth browsing experience for users worldwide.
+

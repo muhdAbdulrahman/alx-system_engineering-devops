@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+mysql -u root -p <<EOF
+CREATE USER IF NOT EXISTS 'replica_user'@'%' IDENTIFIED BY 'Peace222';
+GRANT REPLICATION CLIENT, SELECT, UPDATE, CREATE, RELOAD, INSERT ON *.* TO 'replica_user'@'%' WITH GRANT OPTION;
+GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
+GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+EOF
